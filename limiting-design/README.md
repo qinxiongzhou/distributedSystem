@@ -1,6 +1,6 @@
 # limiting-design 限流设计
 ## 思维导图
-![limiting-design.png](https://github.com/qinxiongzhou/distributedSystem/blob/master/limiting_design/limiting-design.png)
+![limiting-design.png](https://github.com/qinxiongzhou/distributedSystem/blob/master/limiting-design/limiting-design.png)
 
 ## 限流的实现方式
 ### 计数器方式

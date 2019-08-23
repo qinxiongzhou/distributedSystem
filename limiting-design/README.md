@@ -15,14 +15,14 @@
 
 ### 漏斗算法Leaky Bucket
 摘抄一下百科上的定义：    
-漏斗算法(Leaky Bucket)是网络世界中流量整形（Traffic Shaping）或速率限制（Rate Limiting）时经常使用的一种算法，它的主要目的是控制数据注入到网络的速率，平滑网络上的突发流量。漏桶算法提供了一种机制，通过它，突发流量可以被整形以便为网络提供一个稳定的流量。漏桶可以看作是一个带有常量服务时间的单服务器队列，如果漏桶（包缓存）溢出，那么数据包会被丢弃。
+漏斗算法(Leaky Bucket)是网络世界中流量整形（Traffic Shaping）或速率限制（Rate Limiting）时经常使用的一种算法，它的主要目的是控制数据注入到网络的速率，平滑网络上的突发流量。漏桶算法提供了一种机制，通过它，突发流量可以被整形以便为网络提供一个稳定的流量。漏桶可以看作是一个带有常量服务时间的单服务器队列，如果漏桶（包缓存）溢出，那么数据包会被丢弃。    
     
-下图是漏斗算法的示意图：
-![leaky-bucket1.png](https://github.com/qinxiongzhou/distributedSystem/blob/master/limiting-design/leaky-bucket1.png)
+下图是漏斗算法的示意图：      
+![leaky-bucket1.png](https://github.com/qinxiongzhou/distributedSystem/blob/master/limiting-design/leaky-bucket1.png)    
 
-我们可以看到，就像一个漏斗一样，进来的水量就好像访问流量一样，而出去的水量就像是我们系统处理请求一样。当访问流量过大时，这个漏斗就会积水，如果水太多就会溢出。    
+我们可以看到，就像一个漏斗一样，进来的水量就好像访问流量一样，而出去的水量就像是我们系统处理请求一样。当访问流量过大时，这个漏斗就会积水，如果水太多就会溢出。           
 
-![leaky-bucket2.png](https://github.com/qinxiongzhou/distributedSystem/blob/master/limiting-design/leaky-bucket2.png)
+![leaky-bucket2.png](https://github.com/qinxiongzhou/distributedSystem/blob/master/limiting-design/leaky-bucket2.png)    
 我们可以看到，漏斗算法其实就是请求中加入一个队列来做限流，让Processor可以匀速处理请求。
 
 ### 令牌桶算法 Token Bucket

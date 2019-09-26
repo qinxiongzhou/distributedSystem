@@ -40,7 +40,7 @@ public class LimitCounterInterceptor {
         MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
         Method method = methodSignature.getMethod();
         //key为类名+方法名
-        String key = method.getDeclaringClass().getName()+method.getName();
+        String key = method.getDeclaringClass().getName()+"."+method.getName();
 
         LimitCounter limitCounter = method.getAnnotation(LimitCounter.class);
         Integer concurrentNum = Integer.parseInt(limitCounter.concurrentNum());
